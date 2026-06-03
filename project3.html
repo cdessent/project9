@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project 3</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Turtle Project</h1>
+            <hr>
+        </header>
+
+        <section>
+            <h2>Project Description</h2>
+            <p>This project involved refactoring and enhancing a Turtle Graphics scene from a previous 
+                assignment to improve its structure, readability, and maintainability. By applying software
+                 engineering principles such as function decomposition, modular design, and code reuse, 
+                 I reorganized the program into smaller, more focused functions and eliminated redundant code 
+                 through generalized components. The refactored code made it easier to create and manage a more 
+                 complex scene featuring multiple composite figures while demonstrating the benefits of reusable 
+                 and well-structured code. Through this process, I strengthened my understanding of code organization, 
+                 software design, and iterative development practices.</p>
+            <hr>
+        </section>
+
+        <section>
+            <h2>Sample Code</h2>
+            <p>This series of functions creates a boat by arranging rectangles and triangles in a specific layout
+                to form the hull, mast, and sail. The parameters allow for flexible positioning and scaling:</p>
+                <ul>
+                    <li><strong>t:</strong> the turtle graphics object for drawing</li>
+                    <li><strong>x, y:</strong> the coordinates for the boat's position</li>
+                    <li><strong>scale:</strong> a factor to adjust the size of the boat</li>
+                    <li><strong>fill_color:</strong> the color used to fill the shapes of the boat</li>
+                    <li><strong>outline_color:</strong> the color used for the outlines of the shapes (optional)</li>
+                </ul>
+                <div class="code-block">
+                    <code>
+                        def draw_boat(t):
+                        """Draw a boat with hull, mast, and sail"""
+                        # Draw boat hull
+                        jump_to(t, -150, 50)
+                        draw_rectangle(t, 100, 50, fill_color="brown")
+                    
+                        # Draw mast
+                        jump_to(t, -120, 150)
+                        draw_rectangle(t, 10, 100, fill_color="brown")
+                            
+                        # Draw sail
+                        jump_to(t, -155, 90)
+                        draw_triangle(t, 80, fill_color="white")
+                    </code>
+                </div>
+        </section>
+
+        <section>
+            <h2>Final Scene</h2>
+            <p>Here is the final beach scene! (and yes.. those orange circles are supposed to be fish...)</p>
+            <img src="project3finalimage.png" alt="Final beach scene with boat, sun, and fish">
+            <p>In this scene, the boat is positioned on the water with a bright sun overhead, clouds in the sky, and fish swimming nearby. 
+                The use of simple geometric shapes and colors creates a visually appealing composition while demonstrating the effectiveness 
+                of the refactored code in managing complex scenes.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Caitlin Dessent. All rights reserved. Background images from:https://www.vecteezy.com/vector-art/39864275-light-cute-tiny-ditsy-flowers-pattern-seamless-small-white-floral-field-on-a-blue-background-vector-hand-drawn-sketch-template-for-design-fashion-fabric-printing-textile-wallpaper</p>
+        </footer>
